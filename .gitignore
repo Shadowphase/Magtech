@@ -1,1 +1,23 @@
+#Environment
+.project
+.settings
+.gradel
+
+#Minecraft files
+asm/
+banned-ips.json
+banned-players.json
+bin/
+build/
+config/
 crash-reports/
+eula.txt
+logs/
+ops.json
+options.txt
+realms_persistence.json
+saves/
+server.properties
+userchache.json
+whitelist.json
+world/

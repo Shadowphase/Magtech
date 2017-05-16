@@ -1,0 +1,6 @@
+{
+  "parent": "magitech:block/dragon_block",
+  "textures": {
+    "layer0": "magitech:blocks/dragon_block"
+  }
+}

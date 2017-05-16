@@ -1,0 +1,12 @@
+[
+{
+  "modId": "magitech",
+  "name": "Magitech",
+  "description": "A mix of magic and technology for 1.11",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "authors": [ "Shadowphase" ],
+  "credits": ""
+}
+]

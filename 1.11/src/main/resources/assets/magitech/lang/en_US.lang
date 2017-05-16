@@ -1,0 +1,9 @@
+## Items
+item.magitech:dragon_item.name=Dragon
+item.magitech:dragon_pick.name=Dragon Pick
+
+## Blocks
+tile.magitech:dragon_block.name=Dragon Block
+
+## Misc
+itemGroup.magitech:tab_magitech=Magitech
