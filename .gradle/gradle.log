@@ -1,7 +1,7 @@
 This mapping 'snapshot_20161220' was designed for MC 1.11! Use at your own peril.This mapping 'snapshot_20161220' was designed for MC 1.11! Use at your own peril.
 
 #################################################
-         ForgeGradle 2.2-SNAPSHOT-7a557d2        
+         ForgeGradle 2.2-SNAPSHOT-eb2e450        
   https://github.com/MinecraftForge/ForgeGradle  
 #################################################
                Powered by MCP unknown               
@@ -15,10 +15,10 @@ This mapping 'snapshot_20161220' was designed for MC 1.11! Use at your own peril
 :compileApiJava UP-TO-DATE
 :processApiResources UP-TO-DATE
 :apiClasses UP-TO-DATE
-:sourceMainJava UP-TO-DATE
-:compileJava UP-TO-DATE
+:sourceMainJava
+:compileJava
 :processResources UP-TO-DATE
-:classes UP-TO-DATE
+:classes
 :jar
 :sourceTestJava UP-TO-DATE
 :compileTestJava UP-TO-DATE
@@ -31,8 +31,10 @@ This mapping 'snapshot_20161220' was designed for MC 1.11! Use at your own peril
 :extractUserdev UP-TO-DATE
 :genSrgs SKIPPED
 :reobfJar
-:extractRangemapReplacedMain UP-TO-DATE
-:retromapReplacedMain UP-TO-DATE
+:extractRangemapReplacedMain
+C:\Users\Kirbs\Desktop\Projects\Eclipse\workspace\Magitech\build\sources\main\java
+:retromapReplacedMain
+remapping source...
 :sourceJar
 :assemble
 :check UP-TO-DATE
@@ -40,4 +42,4 @@ This mapping 'snapshot_20161220' was designed for MC 1.11! Use at your own peril
 
 BUILD SUCCESSFUL
 
-Total time: 8.217 secs
+Total time: 9.999 secs

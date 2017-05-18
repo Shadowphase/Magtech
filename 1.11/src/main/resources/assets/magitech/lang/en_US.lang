@@ -1,9 +1,10 @@
 ## Items
-item.magitech:dragon_item.name=Dragon
+item.magitech:arcane_dust.name=Arcane Dust
+item.magitech:arcane_ingot.name=Arcane Ingot
 item.magitech:dragon_pick.name=Dragon Pick
 
 ## Blocks
-tile.magitech:dragon_block.name=Dragon Block
+tile.magitech:occult_stone.name=Occult Stone
 
 ## Misc
 itemGroup.magitech:tab_magitech=Magitech

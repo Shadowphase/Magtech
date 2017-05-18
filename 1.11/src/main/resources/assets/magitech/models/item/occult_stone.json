@@ -1,5 +1,5 @@
 {
-  "parent": "magitech:block/dragon_block",
+  "parent": "magitech:block/occult_stone",
   "textures": {
     "layer0": "magitech:blocks/dragon_block"
   }

@@ -1,10 +1,31 @@
+[
 {
-  "items": [
-    {
-      "name": "dragon_item"
-    },
-    {
-      "name": "foo"
-    }
+  "name":"arcane_dust",
+  "className":"com.shadowphase.magitech.items.ArcaneDust",
+  "recipeType":"SHAPED",
+  "recipe":[]
+},
+{
+  "name":"arcane_ingot",
+  "className":"com.shadowphase.magitech.items.ArcaneIngot",
+  "recipeType":"SMELT",
+  "recipe":[
+    "arcane_dust",
+    "0.7f"
+  ]
+},
+{
+  "name":"dragon_pick",
+  "className":"com.shadowphase.magitech.items.tools.DragonPick",
+  "recipeType":"RECIPE",
+  "recipe":[
+    "iii",
+    " s ",
+    " s ",
+    "i",
+    "arcane_ingot",
+    "s",
+    "Items.STICK"
   ]
 }
+]

@@ -1,0 +1,24 @@
+[
+{
+  "name":"occult_stone",
+  "className":"com.shadowphase.magitech.blocks.OccultStone",
+  "material":"Material.ROCK",
+  "hardness":"5.0f",
+  "resistance": "10.0f",
+  "sound": "SoundType.ANVIL",
+  "harvestItem":"pickaxe",
+  "harvestLevel":"1",
+  "recipeType":"RECIPE",
+  "recipe":[
+    "dwd",
+    "wiw",
+    "dwd",
+    'i',
+    "arcane_ingot",
+    'w',
+    Blocks.WOOL,
+    'd',
+    "dyeBlack"
+  ]
+}
+]

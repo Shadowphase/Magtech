@@ -1,8 +1,13 @@
 package com.shadowphase.magitech;
 
-import com.shadowphase.magitech.init.ModItems;
+import java.util.HashMap;
+import java.util.Map;
+
+import com.shadowphase.magitech.lib.ModBlock;
+import com.shadowphase.magitech.lib.ModItem;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -19,6 +24,8 @@ public class Main {
     public static final String VERSION = "@VERSION@";
     public static final String DEPENDENCIES = "required-after:forge@[13.20.0.2296,);";// after:shadowslib";
     public static final String RESOURCE_PREFIX = MODID.toLowerCase() + ":";
+    public static final Map<String, ModItem> items = new HashMap<String, ModItem>();
+    public static final Map<String, ModBlock> blocks = new HashMap<String, ModBlock>();
 
     @Instance(MODID)
     public static Main instance;
@@ -27,19 +34,19 @@ public class Main {
     public static CommonProxy proxy;
 
     @EventHandler
-    public void preInit(FMLPreInitializationEvent event) {
+    public void preInit(final FMLPreInitializationEvent event) {
 
         proxy.preInit(event);
     }
 
     @EventHandler
-    public void init(FMLInitializationEvent event) {
+    public void init(final FMLInitializationEvent event) {
 
         proxy.init(event);
     }
 
     @EventHandler
-    public void postInit(FMLPostInitializationEvent event) {
+    public void postInit(final FMLPostInitializationEvent event) {
 
         proxy.postInit(event);
     }
@@ -47,7 +54,7 @@ public class Main {
     public static CreativeTabs itemTab = new CreativeTabs(Main.RESOURCE_PREFIX + "tab_magitech") {
         @Override
         public ItemStack getTabIconItem() {
-            return new ItemStack(ModItems.item);
+            return new ItemStack((Item) items.get("arcane_dust").getItem());
         }
     };
 }

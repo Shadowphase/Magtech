@@ -12,21 +12,21 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class ClientProxy extends CommonProxy {
 
     @Override
-    public void preInit(FMLPreInitializationEvent event) {
+    public void preInit(final FMLPreInitializationEvent event) {
         super.preInit(event);
     }
 
     @Override
-    public void init(FMLInitializationEvent event) {
+    public void init(final FMLInitializationEvent event) {
         super.init(event);
 
-        ItemModelMesher mesher = Minecraft.getMinecraft().getRenderItem().getItemModelMesher();
+        final ItemModelMesher mesher = Minecraft.getMinecraft().getRenderItem().getItemModelMesher();
         ModItems.initClient(mesher);
         ModBlocks.initClient(mesher);
     }
 
     @Override
-    public void postInit(FMLPostInitializationEvent event) {
+    public void postInit(final FMLPostInitializationEvent event) {
         super.postInit(event);
     }
 }
