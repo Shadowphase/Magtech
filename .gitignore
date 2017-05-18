@@ -19,7 +19,7 @@ options.txt
 realms_persistence.json
 saves/
 server.properties
-userchache.json
+usercache.json
 usernamecache.json
 whitelist.json
 world/
