@@ -20,5 +20,6 @@ realms_persistence.json
 saves/
 server.properties
 userchache.json
+usernamecache.json
 whitelist.json
 world/
