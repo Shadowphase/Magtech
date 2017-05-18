@@ -15,10 +15,7 @@ public class Constants {
     public static final ToolMaterial TOOL_MAT = EnumHelper.addToolMaterial(Main.RESOURCE_PREFIX + ".toolMat", 4, 2048,
             10.0f, 4.0f, 16);
 
-    /**** BLOCKS ****/
-    public static final String BLOCK_NAME = "dragon_block";
-
     public static enum RecipeType {
-        SMELT, SHAPED, SHAPELESS, SHAPEDORE, RECIPE
+        SMELT, SHAPED, SHAPELESS, RECIPE, NONE
     }
 }

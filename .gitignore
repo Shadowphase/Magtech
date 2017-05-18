@@ -1,7 +1,8 @@
 #Environment
-#.project
+.project
 .settings
 .gradel
+.classpath
 
 #Minecraft files
 asm/

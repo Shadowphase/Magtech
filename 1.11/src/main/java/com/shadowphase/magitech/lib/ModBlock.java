@@ -25,8 +25,8 @@ public class ModBlock {
     private Constants.RecipeType recipeType;
     private String[] recipe;
 
-    public Object getBlock() {
-        return block;
+    public Block getBlock() {
+        return (Block) block;
     }
 
     public void setBlock(final Object item) {
@@ -130,10 +130,10 @@ public class ModBlock {
         String recipeItem = recipe[0];
         try {
             if (Main.items.containsKey(recipeItem)) {
-                GameRegistry.addSmelting(new ItemStack((Item) Main.items.get(recipeItem).getItem()),
+                GameRegistry.addSmelting(new ItemStack(Main.items.get(recipeItem).getItem()),
                         new ItemStack((Block) block), Float.parseFloat(recipe[1]));
             } else if (Main.blocks.containsKey(recipeItem)) {
-                GameRegistry.addSmelting(new ItemStack((Block) Main.blocks.get(recipeItem).getBlock()),
+                GameRegistry.addSmelting(new ItemStack(Main.blocks.get(recipeItem).getBlock()),
                         new ItemStack((Block) block), Float.parseFloat(recipe[1]));
             } else if (recipeItem.startsWith(Constants.ITEM)) {
                 final int charIndex = recipeItem.indexOf('.');
@@ -169,9 +169,9 @@ public class ModBlock {
                 final String inputStr = recipe[i];
                 if (inputStr.length() > 1) {
                     if (Main.items.containsKey(inputStr)) {
-                        params[i] = new ItemStack((Item) Main.items.get(inputStr).getItem());
+                        params[i] = new ItemStack(Main.items.get(inputStr).getItem());
                     } else if (Main.blocks.containsKey(inputStr)) {
-                        params[i] = new ItemStack((Block) Main.blocks.get(inputStr).getBlock());
+                        params[i] = new ItemStack(Main.blocks.get(inputStr).getBlock());
                     } else if (inputStr.startsWith(Constants.ITEM)) {
                         final int charIndex = inputStr.indexOf('.');
                         final String recipeItemName = inputStr.substring(charIndex + 1);

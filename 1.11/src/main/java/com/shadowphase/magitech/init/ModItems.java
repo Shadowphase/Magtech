@@ -71,7 +71,7 @@ public class ModItems {
     public static void initClient(final ItemModelMesher mesher) {
         for (final Entry<String, ModItem> itemEntry : Main.items.entrySet()) {
             final ModItem item = itemEntry.getValue();
-            registerModel((Item) item.getItem(), item.getName(), mesher);
+            registerModel(item.getItem(), item.getName(), mesher);
         }
     }
 

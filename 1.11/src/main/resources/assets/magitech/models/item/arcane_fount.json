@@ -1,0 +1,6 @@
+{
+  "parent": "magitech:block/arcane_fount",
+  "textures": {
+    "layer0": "magitech:blocks/red1"
+  }
+}

@@ -95,7 +95,7 @@ public class ModBlocks {
     public static void initClient(final ItemModelMesher mesher) {
         for (final Entry<String, ModBlock> itemEntry : Main.blocks.entrySet()) {
             final ModBlock block = itemEntry.getValue();
-            registerModel((Block) block.getBlock(), block.getName(), mesher);
+            registerModel(block.getBlock(), block.getName(), mesher);
         }
     }
 

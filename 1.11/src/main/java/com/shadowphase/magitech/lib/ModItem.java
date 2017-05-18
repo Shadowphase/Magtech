@@ -19,8 +19,8 @@ public class ModItem {
     private Constants.RecipeType recipeType;
     private String[] recipe;
 
-    public Object getItem() {
-        return item;
+    public Item getItem() {
+        return (Item) item;
     }
 
     public void setItem(final Object item) {
@@ -76,7 +76,7 @@ public class ModItem {
         final String recipeItem = recipe[0];
         try {
             if (Main.items.containsKey(recipeItem)) {
-                GameRegistry.addSmelting(new ItemStack((Item) Main.items.get(recipeItem).getItem()),
+                GameRegistry.addSmelting(new ItemStack(Main.items.get(recipeItem).getItem()),
                         new ItemStack((Item) item), Float.parseFloat(recipe[1]));
             } else if (recipeItem.startsWith(Constants.ITEM)) {
                 final int charIndex = recipeItem.indexOf('.');
@@ -112,7 +112,7 @@ public class ModItem {
                 final String inputStr = recipe[i];
                 if (inputStr.length() > 1) {
                     if (Main.items.containsKey(inputStr)) {
-                        params[i] = new ItemStack((Item) Main.items.get(inputStr).getItem());
+                        params[i] = new ItemStack(Main.items.get(inputStr).getItem());
                     } else if (Main.blocks.containsKey(inputStr)) {
                         params[i] = new ItemStack((Block) Main.blocks.get(inputStr).getBlock());
                     } else if (inputStr.startsWith(Constants.ITEM)) {

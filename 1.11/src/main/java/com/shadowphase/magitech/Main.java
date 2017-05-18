@@ -7,7 +7,6 @@ import com.shadowphase.magitech.lib.ModBlock;
 import com.shadowphase.magitech.lib.ModItem;
 
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -54,7 +53,7 @@ public class Main {
     public static CreativeTabs itemTab = new CreativeTabs(Main.RESOURCE_PREFIX + "tab_magitech") {
         @Override
         public ItemStack getTabIconItem() {
-            return new ItemStack((Item) items.get("arcane_dust").getItem());
+            return new ItemStack(items.get("arcane_dust").getItem());
         }
     };
 }
