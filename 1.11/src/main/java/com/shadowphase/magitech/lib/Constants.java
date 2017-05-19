@@ -9,6 +9,7 @@ public class Constants {
 
     public static final String ITEMS_JSON = "assets/magitech/items/items.json";
     public static final String BLOCKS_JSON = "assets/magitech/blocks/blocks.json";
+    public static final String ORE_GENERATION = "assets/magitech/world/oreGeneration.json";
     public static final String ITEM = "Items";
     public static final String BLOCK = "Blocks";
 

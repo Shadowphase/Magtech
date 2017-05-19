@@ -25,6 +25,6 @@ public class ArcaneFount extends Block {
 
     @Override
     public int quantityDropped(Random random) {
-        return random.nextInt(3) + 1;
+        return random.nextInt(2) + 1;
     }
 }

@@ -33,7 +33,7 @@ public class ModBlocks {
         InputStream readIn = null;
         Reader reader = null;
         try {
-            ClassLoader loader = ModItems.class.getClassLoader();
+            ClassLoader loader = ModBlocks.class.getClassLoader();
             readIn = loader.getResourceAsStream(Constants.BLOCKS_JSON);
             reader = new InputStreamReader(readIn, "UTF-8");
             ModBlock[] blocks = new Gson().fromJson(reader, ModBlock[].class);
