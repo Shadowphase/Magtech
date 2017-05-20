@@ -22,4 +22,4 @@ server.properties
 usercache.json
 usernamecache.json
 whitelist.json
-./world/
+/world

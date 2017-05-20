@@ -1,0 +1,29 @@
+[
+  [
+  {
+    "blockName":"arcane_fount",
+    "oreNumber":8,
+    "chanceToSpawn":6,
+    "minHeight":0,
+    "maxHeight":18
+  }
+  ],
+  [
+  {
+    "blockName":"arcane_fount",
+    "oreNumber":50,
+    "chanceToSpawn":20,
+    "minHeight":0,
+    "maxHeight":64
+  }
+  ],
+  [
+  {
+    "blockName":"arcane_fount",
+    "oreNumber":50,
+    "chanceToSpawn":20,
+    "minHeight":0,
+    "maxHeight":64
+  }
+  ]
+]
