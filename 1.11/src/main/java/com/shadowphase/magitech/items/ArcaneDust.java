@@ -14,6 +14,10 @@ public class ArcaneDust extends Item {
         setMaxStackSize(64);
     }
 
+    public ArcaneDust(final int stackSize) {
+        setMaxStackSize(stackSize);
+    }
+
     @Override
     public ActionResult<ItemStack> onItemRightClick(final World world, final EntityPlayer player, final EnumHand hand) {
         if (!world.isRemote) {

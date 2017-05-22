@@ -22,6 +22,28 @@
   ]
 },
 {
+  "name":"gateway_stabilizer",
+  "className":"com.shadowphase.magitech.blocks.GatewayStabilizer",
+  "material":Material.ROCK,
+  "hardness":"5.0f",
+  "resistance": "10.0f",
+  "sound": SoundType.STONE,
+  "harvestItem":"pickaxe",
+  "harvestLevel":"1",
+  "recipeType":"RECIPE",
+  "recipe":[
+    "psp",
+    "sis",
+    "psp",
+    'i',
+    "arcane_ingot",
+    's',
+    "occult_stone",
+    'p',
+    Items.ENDER_PEARL
+  ]
+},
+{
   "name":"arcane_fount",
   "className":"com.shadowphase.magitech.blocks.ArcaneFount",
   "material":"Material.ROCK",

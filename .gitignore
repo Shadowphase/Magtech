@@ -23,3 +23,8 @@ usercache.json
 usernamecache.json
 whitelist.json
 /world
+screenshots/
+
+#other
+1.11/src/main/resources/assets/magitech/util/field_map.json
+1.11/src/main/resources/assets/magitech/util/method_map.json

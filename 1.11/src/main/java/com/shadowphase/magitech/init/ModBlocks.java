@@ -5,7 +5,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.io.UnsupportedEncodingException;
-import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Map.Entry;
 
@@ -13,6 +12,7 @@ import com.google.gson.Gson;
 import com.shadowphase.magitech.Main;
 import com.shadowphase.magitech.lib.Constants;
 import com.shadowphase.magitech.lib.ModBlock;
+import com.shadowphase.magitech.lib.util.NameConverter;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -45,16 +45,15 @@ public class ModBlocks {
                 String paramStr = modBlock.getMaterial();
                 int charIndex = paramStr.indexOf('.');
                 String paramName = paramStr.substring(charIndex + 1);
-                System.out.println("material: " + Material.ROCK);
-                final Field matField = Material.class.getField(paramName);
+                Material matField = (Material) NameConverter.getField(Material.class, paramName);
 
                 paramStr = modBlock.getSound();
                 charIndex = paramStr.indexOf('.');
                 paramName = paramStr.substring(charIndex + 1);
-                final Field soundField = SoundType.class.getField(paramName);
+                SoundType soundField = (SoundType) NameConverter.getField(SoundType.class, paramName);
 
                 final Block block = (Block) Class.forName(className).getConstructor(SoundType.class, Material.class)
-                        .newInstance(soundField.get(null), matField.get(null));
+                        .newInstance(soundField, matField);
                 initBlock(modBlock, block);
                 register(block, name);
                 modBlock.setBlock(block);
@@ -67,8 +66,6 @@ public class ModBlocks {
         } catch (final UnsupportedEncodingException e) {
             e.printStackTrace();
         } catch (final IllegalArgumentException | InvocationTargetException | NoSuchMethodException e) {
-            e.printStackTrace();
-        } catch (final SecurityException | NoSuchFieldException e) {
             e.printStackTrace();
         } finally {
             try {

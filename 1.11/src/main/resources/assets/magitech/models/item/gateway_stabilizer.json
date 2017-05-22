@@ -1,0 +1,6 @@
+{
+  "parent": "magitech:block/gateway_stabilizer",
+  "textures": {
+    "layer0": "magitech:blocks/blue0"
+  }
+}
