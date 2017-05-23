@@ -1,5 +1,7 @@
 package com.shadowphase.magitech.blocks;
 
+import com.shadowphase.magitech.lib.Constants;
+import com.shadowphase.magitech.lib.util.MultiblockStructureUtil;
 import com.shadowphase.magitech.tiles.TileEntityGatewayStabalizer;
 
 import net.minecraft.block.Block;
@@ -20,12 +22,17 @@ import net.minecraft.world.World;
 
 public class GatewayStabilizer extends Block implements ITileEntityProvider {
 
-    public static final Vec3d[] MULTIBLOCK_LOCATIONS = new Vec3d[1];
+    public static int structSize = 0;
+    public static Vec3d[] MULTIBLOCK_LOCATIONS;
+    public static Object[] PORTAL_BLOCKS;
 
     public GatewayStabilizer(final SoundType soundType, final Material mat) {
         super(mat);
         setSoundType(soundType);
-        MULTIBLOCK_LOCATIONS[0] = new Vec3d(2, -1, 2);
+        MultiblockStructureUtil structUtil = new MultiblockStructureUtil(Constants.PORTAL_JSON);
+        structSize = structUtil.getSize();
+        MULTIBLOCK_LOCATIONS = structUtil.getPositions();
+        PORTAL_BLOCKS = structUtil.getBlocks();
     }
 
     @Override
@@ -43,16 +50,6 @@ public class GatewayStabilizer extends Block implements ITileEntityProvider {
                 if (!stabilizer.isMultiblock()) {
                     ItemStack item = playerIn.getHeldItem(hand);
                     if (item != null && item.getItem() == Items.ENDER_EYE) {
-                        for (int i = 0; i < MULTIBLOCK_LOCATIONS.length; ++i) {
-                            BlockPos blockPos = new BlockPos(pos.getX() + MULTIBLOCK_LOCATIONS[i].xCoord,
-                                    pos.getY() + MULTIBLOCK_LOCATIONS[i].yCoord,
-                                    pos.getZ() + MULTIBLOCK_LOCATIONS[i].zCoord);
-                            Block block = worldIn.getBlockState(blockPos).getBlock();
-                            if (block instanceof OccultStone) {
-                                stabilizer.setMultiblock(i, 1);
-                                ((OccultStone) block).setMaster(worldIn, blockPos, stabilizer);
-                            }
-                        }
                         if (stabilizer.isMultiblock()) {
                             item.setCount(item.getCount() - 1);
                         }

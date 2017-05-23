@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "magitech:items/purple5"
+    "layer0": "magitech:items/arcane_ingot"
   }
 }

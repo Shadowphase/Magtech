@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "magitech:blocks/red1"
+    "all": "magitech:blocks/arcane_fount"
   }
 }

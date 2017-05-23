@@ -1,8 +1,9 @@
 #Environment
 .project
 .settings
-.gradel
+.gradel/
 .classpath
+hs_err_pid12160.log
 
 #Minecraft files
 asm/
