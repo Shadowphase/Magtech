@@ -1,5 +1,6 @@
 package com.shadowphase.magitech.lib.util;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
@@ -149,7 +150,9 @@ public class NameConverter {
 
         FileWriter writer = null;
         try {
-            writer = new FileWriter(RESOURCE_FOLDER + fileName);
+            File file = new File(RESOURCE_FOLDER + fileName);
+            file.getParentFile().mkdirs();
+            writer = new FileWriter(file);
             Gson gson = new GsonBuilder().create();
             gson.toJson(objectList, writer);
         } catch (IOException e) {

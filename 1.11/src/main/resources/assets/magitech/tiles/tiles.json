@@ -1,0 +1,10 @@
+[
+{
+  "name":"tile.entity.gateway_stabilizer",
+  "className":"com.shadowphase.magitech.tiles.TileEntityGatewayStabalizer"
+},
+{
+  "name":"tile.entity.occult_stone",
+  "className":"com.shadowphase.magitech.tiles.TileEntityOccultStone"
+}
+]

@@ -2,6 +2,7 @@ package com.shadowphase.magitech;
 
 import com.shadowphase.magitech.init.ModBlocks;
 import com.shadowphase.magitech.init.ModItems;
+import com.shadowphase.magitech.init.ModTileEntities;
 import com.shadowphase.magitech.world.OreGenerator;
 
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -16,6 +17,7 @@ public class CommonProxy {
     public void preInit(final FMLPreInitializationEvent event) {
         ModItems.init();
         ModBlocks.init();
+        ModTileEntities.init();
     }
 
     @EventHandler
