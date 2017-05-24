@@ -1,6 +1,6 @@
 [
 {
-  "name":"tile.entity.gateway_stabilizer",
-  "className":"com.shadowphase.magitech.tiles.TileEntityGatewayStabalizer"
+  "name":"tile.entity.portal_core",
+  "className":"com.shadowphase.magitech.tiles.TileEntityPortalCore"
 }
 ]

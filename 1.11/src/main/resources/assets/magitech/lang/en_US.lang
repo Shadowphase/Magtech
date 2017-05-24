@@ -6,6 +6,7 @@ item.magitech:dragon_pick.name=Dragon Pick
 ## Blocks
 tile.magitech:occult_stone.name=Occult Stone
 tile.magitech:arcane_fount.name=Arcane Fount
+tile.magitech:portal_core.name=Portal Core
 tile.magitech:gateway_stabilizer.name=Gateway Stabilizer
 
 ## Misc

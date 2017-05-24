@@ -1,6 +1,6 @@
 package com.shadowphase.magitech.tiles;
 
-import com.shadowphase.magitech.blocks.GatewayStabilizer;
+import com.shadowphase.magitech.blocks.PortalCore;
 
 import net.minecraft.block.Block;
 import net.minecraft.nbt.NBTTagCompound;
@@ -11,25 +11,26 @@ import net.minecraft.util.ITickable;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 
-public class TileEntityGatewayStabalizer extends TileEntity implements ITickable {
+public class TileEntityPortalCore extends TileEntity implements ITickable {
 
-    private int timer = 0;
+    private static final int MAX_TIME = 100;
     private static final String MULTIBLOCK = "multiblock";
 
-    private boolean multiblock = false;
+    private int timer = 0;
+    private int multiblock = 0;
 
-    public TileEntityGatewayStabalizer() {
+    public TileEntityPortalCore() {
     }
 
     @Override
     public void readFromNBT(NBTTagCompound compound) {
-        this.multiblock = compound.getBoolean(MULTIBLOCK);
+        this.multiblock = compound.getInteger(MULTIBLOCK);
         super.readFromNBT(compound);
     }
 
     @Override
     public NBTTagCompound writeToNBT(NBTTagCompound compound) {
-        compound.setBoolean(MULTIBLOCK, this.multiblock);
+        compound.setInteger(MULTIBLOCK, this.multiblock);
         return super.writeToNBT(compound);
     }
 
@@ -68,30 +69,40 @@ public class TileEntityGatewayStabalizer extends TileEntity implements ITickable
     @Override
     public void update() {
         if (!this.world.isRemote) {
-            timer++;
-            timer %= 100;
+            ++timer;
+            timer %= MAX_TIME;
             if (timer == 0) {
                 checkCompelete();
             }
         }
     }
 
-    public boolean isMultiblock() {
+    public int isMultiblock() {
         return this.multiblock;
     }
 
     private void checkCompelete() {
-        Vec3d[] loc = GatewayStabilizer.MULTIBLOCK_LOCATIONS;
-        Object[] blocks = GatewayStabilizer.PORTAL_BLOCKS;
-        for (int i = 0; i < GatewayStabilizer.structSize; ++i) {
-            BlockPos blockPos = new BlockPos(pos.getX() + loc[i].xCoord, pos.getY() + loc[i].yCoord,
-                    pos.getZ() + loc[i].zCoord);
-            Block block = getWorld().getBlockState(blockPos).getBlock();
-            if (!block.getClass().isInstance(blocks[i])) {
-                multiblock = false;
-                break;
+        Vec3d[] loc = PortalCore.MULTIBLOCK_LOCATIONS;
+        Object[] blocks = PortalCore.PORTAL_BLOCKS;
+        int[] tierSizes = PortalCore.TIER_SIZES;
+        boolean exit = false;
+        int blockCount = 0;
+        multiblock = 0;
+        for (int j = 1; j <= tierSizes.length; ++j) {
+            for (int i = 0; i < tierSizes[j - 1]; ++i, ++blockCount) {
+                BlockPos blockPos = new BlockPos(pos.getX() + loc[blockCount].xCoord,
+                        pos.getY() + loc[blockCount].yCoord, pos.getZ() + loc[blockCount].zCoord);
+                Block block = getWorld().getBlockState(blockPos).getBlock();
+                if (!block.getClass().isInstance(blocks[blockCount])) {
+                    exit = true;
+                    break;
+                }
             }
-            multiblock = true;
+            if (exit) {
+                break;
+            } else {
+                multiblock = j;
+            }
         }
     }
 }

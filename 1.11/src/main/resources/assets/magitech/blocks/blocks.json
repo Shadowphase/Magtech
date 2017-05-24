@@ -44,6 +44,26 @@
   ]
 },
 {
+  "name":"portal_core",
+  "className":"com.shadowphase.magitech.blocks.PortalCore",
+  "material":Material.PLANTS,
+  "hardness":"2.0f",
+  "resistance": "18000000.0f",
+  "sound": SoundType.LADDER,
+  "harvestItem":null,
+  "harvestLevel":"0",
+  "recipeType":"RECIPE",
+  "recipe":[
+    " p ",
+    "pip",
+    " p ",
+    'i',
+    "arcane_ingot",
+    'p',
+    Items.ENDER_PEARL
+  ]
+},
+{
   "name":"arcane_fount",
   "className":"com.shadowphase.magitech.blocks.ArcaneFount",
   "material":Material.ROCK,

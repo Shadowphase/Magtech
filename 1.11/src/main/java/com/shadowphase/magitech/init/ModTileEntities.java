@@ -16,6 +16,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModTileEntities {
 
+    @SuppressWarnings("unchecked")
     public static <T extends TileEntity> void init() {
         InputStream readIn = null;
         Reader reader = null;
@@ -31,7 +32,6 @@ public class ModTileEntities {
 
                 final Class<T> tileEntityClass = (Class<T>) Class.forName(className);
                 register(tileEntityClass, name);
-                // Main.blocks.put(name, tileEntity);
             }
         } catch (final ClassNotFoundException e) {
             e.printStackTrace();

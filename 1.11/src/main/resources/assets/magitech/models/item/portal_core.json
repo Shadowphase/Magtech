@@ -1,0 +1,6 @@
+{
+  "parent": "magitech:block/portal_core",
+  "textures": {
+    "layer0": "magitech:blocks/portal_core"
+  }
+}
