@@ -8,6 +8,7 @@
   "sound": SoundType.ANVIL,
   "harvestItem":"pickaxe",
   "harvestLevel":"1",
+  "lightLevel":null,
   "recipeType":"RECIPE",
   "recipe":[
     "dwd",
@@ -30,6 +31,7 @@
   "sound": SoundType.STONE,
   "harvestItem":"pickaxe",
   "harvestLevel":"1",
+  "lightLevel":null,
   "recipeType":"RECIPE",
   "recipe":[
     "psp",
@@ -52,6 +54,7 @@
   "sound": SoundType.LADDER,
   "harvestItem":null,
   "harvestLevel":"0",
+  "lightLevel":"0.7f",
   "recipeType":"RECIPE",
   "recipe":[
     " p ",
@@ -72,6 +75,7 @@
   "sound": SoundType.STONE,
   "harvestItem":"pickaxe",
   "harvestLevel":"1",
+  "lightLevel":null,
   "recipeType":"NONE",
   "recipe":[]
 }

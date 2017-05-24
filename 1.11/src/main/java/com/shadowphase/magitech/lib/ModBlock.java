@@ -21,6 +21,7 @@ public class ModBlock {
     private String sound;
     private String harvestItem;
     private String harvestLevel;
+    private String lightLevel;
     private Constants.RecipeType recipeType;
     private String[] recipe;
 
@@ -94,6 +95,14 @@ public class ModBlock {
 
     public void setHarvestLevel(final String harvestLevel) {
         this.harvestLevel = harvestLevel;
+    }
+
+    public String getLightLevel() {
+        return lightLevel;
+    }
+
+    public void setLightLevel(String lightLevel) {
+        this.lightLevel = lightLevel;
     }
 
     public Constants.RecipeType getRecipeType() {

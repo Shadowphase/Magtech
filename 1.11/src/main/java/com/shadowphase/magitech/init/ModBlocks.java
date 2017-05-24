@@ -98,9 +98,22 @@ public class ModBlocks {
 
     private static void initBlock(final ModBlock modBlock, final Block block) {
         try {
-            block.setHardness(Float.parseFloat(modBlock.getHardness()));
-            block.setResistance(Float.parseFloat(modBlock.getResistance()));
-            block.setHarvestLevel(modBlock.getHarvestItem(), Integer.parseInt(modBlock.getHarvestLevel()));
+            String attrib = modBlock.getHardness();
+            if (attrib != null) {
+                block.setHardness(Float.parseFloat(attrib));
+            }
+            attrib = modBlock.getResistance();
+            if (attrib != null) {
+                block.setResistance(Float.parseFloat(attrib));
+            }
+            attrib = modBlock.getHarvestLevel();
+            if (attrib != null) {
+                block.setHarvestLevel(modBlock.getHarvestItem(), Integer.parseInt(attrib));
+            }
+            attrib = modBlock.getLightLevel();
+            if (attrib != null) {
+                block.setLightLevel(Float.parseFloat(attrib));
+            }
         } catch (final SecurityException e) {
             e.printStackTrace();
         }
