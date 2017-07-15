@@ -11,15 +11,15 @@
   "lightLevel":null,
   "recipeType":"RECIPE",
   "recipe":[
-    "dwd",
-    "wiw",
-    "dwd",
+    "pop",
+    "oio",
+    "pop",
     'i',
     "arcane_ingot",
-    'w',
-    Blocks.WOOL,
-    'd',
-    "dyeBlack"
+    'o',
+    Blocks.OBSIDIAN,
+    'p',
+    "dyePurple"
   ]
 },
 {
@@ -75,6 +75,19 @@
   "sound": SoundType.STONE,
   "harvestItem":"pickaxe",
   "harvestLevel":"1",
+  "lightLevel":null,
+  "recipeType":"NONE",
+  "recipe":[]
+},
+{
+  "name":"recondite_ore",
+  "className":"com.shadowphase.magitech.blocks.ReconditeOre",
+  "material":Material.ROCK,
+  "hardness":"10.0f",
+  "resistance": "15.0f",
+  "sound": SoundType.STONE,
+  "harvestItem":"pickaxe",
+  "harvestLevel":"3",
   "lightLevel":null,
   "recipeType":"NONE",
   "recipe":[]

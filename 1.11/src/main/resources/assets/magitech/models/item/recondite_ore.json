@@ -1,0 +1,6 @@
+{
+  "parent": "magitech:block/recondite_ore",
+  "textures": {
+    "layer0": "magitech:blocks/recondite_ore"
+  }
+}

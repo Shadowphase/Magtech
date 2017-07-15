@@ -2,7 +2,7 @@
 {
   "name":"arcane_dust",
   "className":"com.shadowphase.magitech.items.ArcaneDust",
-  "recipeType":"SHAPED",
+  "recipeType":"NONE",
   "recipe":[]
 },
 {
@@ -27,5 +27,11 @@
     "s",
     "Items.STICK"
   ]
+},
+{
+  "name":"enigma_gem",
+  "className":"com.shadowphase.magitech.items.EnigmaGem",
+  "recipeType":"NONE",
+  "recipe":[]
 }
 ]

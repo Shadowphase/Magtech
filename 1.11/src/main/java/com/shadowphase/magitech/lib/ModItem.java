@@ -66,6 +66,7 @@ public class ModItem {
         case RECIPE:
             addGenericRecipe();
             break;
+        case NONE:
         default:
             break;
         }
